@@ -34,9 +34,9 @@ const Profile = () => {
         </div>
       <div className="userinfo">
 
-        <h4 className='userHeading'> Welcome <br />  {user.email}</h4>
+        <h4 className='userHeading'> Welcome </h4>
         <img src={profileLogo} alt="profileicon" className='userIcon' />
-        <p className='userEmail'>User Email : {user.email} </p>
+        {user.email === null ? "admin@gmail.com" : <p className='userEmail'>User Email : {user.email} </p>}
 
         <button onClick={handleLogOut} className="userLogout">Log out</button>
       </div>

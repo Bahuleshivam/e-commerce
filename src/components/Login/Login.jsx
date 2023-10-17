@@ -13,15 +13,16 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useUserAuth } from '../context/UserAuthContext';
 
 
+
 export default function Login() {
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
-  const { logIn  } = useUserAuth();
+  const { logIn,logInAnonymously  } = useUserAuth();
 
-  
-  
+  // let guestEmail = "admin@123"
+  // let guestPassword = "12345678"  
   const navigate = useNavigate();
 
   const handleSubmit = async (e) =>{
@@ -35,6 +36,16 @@ export default function Login() {
         setError(err.message);
     }
    }
+
+   const handleGuestLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await logInAnonymously(); // Call the new anonymous sign-in function
+      navigate("/Profile");
+    } catch (error) {
+      setError(error.message);
+    }
+  }
 
   return (
     <>
@@ -63,7 +74,7 @@ export default function Login() {
       <MDBBtn type='submit' className='mb-2' block>
         Sign in
       </MDBBtn>
-      <MDBBtn type='submit' className='mb-2' block >
+      <MDBBtn type='submit' className='mb-2' block onClick={handleGuestLogin} >
         Geust Login
       </MDBBtn>
 

@@ -19,8 +19,10 @@ export default function Signup() {
      const [email, setEmail] = useState("")
      const [password, setPassword] = useState("")
      const [error, setError] = useState("")
-     const { signUp } = useUserAuth();
+     const { signUp , logInAnonymously } = useUserAuth();
      const navigate = useNavigate();
+
+  
 
      const handleSubmit = async (e) =>{
       e.preventDefault();
@@ -32,6 +34,16 @@ export default function Signup() {
           setError(err.message);
       }
      }
+
+     const handleGuestLogin = async (e) => {
+      e.preventDefault();
+      try {
+        await logInAnonymously(); // Call the new anonymous sign-in function
+        navigate("/Profile");
+      } catch (error) {
+        setError(error.message);
+      }
+    }
 
   return (
     <>
@@ -67,7 +79,7 @@ export default function Signup() {
       <MDBBtn type='submit' className='mb-2' block>
         Sign in
       </MDBBtn>
-      <MDBBtn type='submit' className='mb-2' block>
+      <MDBBtn type='submit' className='mb-2' block onClick={handleGuestLogin}>
         Geust Login
       </MDBBtn>
 
