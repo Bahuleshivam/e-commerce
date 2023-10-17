@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.leftside {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightSide {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+Form{
+    width: 70%;
+
+}
+
+@media screen and (max-width: 768px) {
+    .rightSide {
+      width: 90%;
+      height: auto;
+    }
+    .login-img{
+        width: 100%;
+    }
+    .leftside{
+        height: 30vh;
+    }
+
+    p{
+        width: 80%;
+    }
+
+
+  }

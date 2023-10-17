@@ -1,0 +1,23 @@
+Form {
+    width: 70%;
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .rightSide {
+        width: 90%;
+    }
+
+    .leftside {
+        width: 80%;
+        height: 46vh;
+    }
+
+    p{
+        width: 80%;
+    }
+}

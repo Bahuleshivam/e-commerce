@@ -1,0 +1,68 @@
+/* Default styles for #page-header */
+#page-header {
+    height: 557px;
+    width: 100%;
+    background-color: #e8ebff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  .text {
+    margin: 0 144px;
+    width: 53%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .m-1 {
+    margin: 10px 0;
+  }
+  
+  .link {
+    text-decoration: none;
+    width: 218px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    background-color: forestgreen;
+    align-items: center;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    color: aliceblue;
+  }
+  
+  .page-header-h1-c {
+    color: #116D6E;
+    font-size: 45px;
+  }
+  
+  .page-header-h1 {
+    font-size: 45px;
+  }
+  
+  .font {
+    font-size: 24px;
+  }
+  
+  /* Media query for screens with a maximum width of 768px */
+  @media screen and (max-width: 768px) {
+    #page-header {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .text {
+      margin: 0 20px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .link {
+      width: 100%;
+    }
+  }
+  

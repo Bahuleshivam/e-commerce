@@ -1,0 +1,130 @@
+.Filter-list {
+    width: 20vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 2px 2px rgb(98 98 98);
+    transition: 0.5s;
+    z-index: 10;
+    border-radius: 9px;
+    position: fixed;
+    top: 16%;
+    padding: 10px;
+    padding-top: 5px;
+    background-color: white;
+}
+
+body{
+    position: relative;
+
+}
+
+.toggle {
+    width: 70px;
+    height: 36px;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 10px;
+    right: -71px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: black;
+}
+.toggle-function {
+    transform: translate(-100%,0);
+    transition: 0.5s;
+}
+
+.Category {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.chech-category {
+    margin: 0 10px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.Ratings {
+    margin: 20px 0;
+    border: 2px solid #999999;
+    border-right: none;
+    border-left: none;
+    padding: 10px 0px;
+}
+
+.activeButton {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.inactiveButton {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#filbtn {
+    border: 1px solid black;
+    width: 65px;
+    height: 33px;
+    border-radius: 9px;
+    margin: 1px 5px 5px 1px;
+}
+
+.title {
+    font-size: 18px;
+    margin: 13px 5px;
+    color: black;
+}
+
+.filpara {
+    margin-bottom: 0px;
+}
+
+.filRange {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #272c32;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .Filter-list {
+        width: 50%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 2px 2px 2px 2px rgb(98 98 98);
+        transition: 0.5s;
+        z-index: 10;
+        border-radius: 9px;
+        position: fixed;
+        top: 16%;
+        padding: 10px;
+        padding-top: 5px;
+        background-color: white;
+    }
+    
+
+}
+
+
+
+
+
