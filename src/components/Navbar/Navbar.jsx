@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>) :
           <li> <Link to="/login" onClick={closeMobileMenu}>Login</Link></li>}
         <li>
-          <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
+          <Link to="/Contact" onClick={closeMobileMenu}>Contact</Link>
         </li>
       </ul>
       <div className="hamburger" onClick={handleHamburgerClick}>
